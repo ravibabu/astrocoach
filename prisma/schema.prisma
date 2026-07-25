@@ -1,0 +1,91 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            String   @id @default(cuid())
+
+  name          String?
+  email         String?  @unique
+  mobile        String?  @unique
+  googleId      String?  @unique
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  conversations Conversation[]
+  memories      Memory[]
+}
+
+model Conversation {
+
+  id            String   @id @default(cuid())
+
+  title         String?
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  lastMessageAt DateTime?
+
+  userId        String
+  user          User @relation(fields: [userId], references: [id])
+
+  messages      Message[]
+  toolExecutions ToolExecution[]
+}
+
+model Message {
+
+  id             String   @id @default(cuid())
+
+  role           String
+
+  content        String   @db.Text
+
+  tokenCount     Int?
+
+  createdAt      DateTime @default(now())
+
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+}
+
+model ToolExecution {
+
+  id             String @id @default(cuid())
+
+  toolName       String
+
+  arguments      Json
+
+  response       Json?
+
+  executionTime  Int?
+
+  createdAt      DateTime @default(now())
+
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id])
+}
+
+model Memory {
+
+  id             String @id @default(cuid())
+
+  key            String
+
+  value          String @db.Text
+
+  confidence     Float?
+
+  createdAt      DateTime @default(now())
+
+  updatedAt      DateTime @updatedAt
+
+  userId         String
+  user           User @relation(fields: [userId], references: [id])
+}

@@ -1,30 +1,36 @@
 import "dotenv/config";
 import express from "express";
-import { askGemini } from "./llm/gemini.js";
-import { MCPService } from "./mcp/client.js";
+
+import { ChatService } from "./services/ChatService.js";
+import { MCPService } from "./mcp/MCPService.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+let chatService: ChatService;
+
 app.use(express.json());
 
 /**
- * Health Check
+ * Home
  */
 app.get("/", (req, res) => {
   res.send("🚀 AstroCoach Backend Running");
 });
 
+/**
+ * Health Check
+ */
 app.get("/health", (req, res) => {
   res.json({
     status: "UP",
-    timestamp: new Date(),
+    timestamp: new Date().toISOString(),
     version: "1.0.0",
   });
 });
 
 /**
- * Chat Endpoint
+ * Chat
  */
 app.post("/chat", async (req, res) => {
   try {
@@ -36,22 +42,31 @@ app.post("/chat", async (req, res) => {
       });
     }
 
-    const answer = await askGemini(message);
+    const answer = await chatService.chat(message);
 
-    res.json({
+    return res.json({
       answer,
     });
-  } catch (err: any) {
-    console.error(err);
+  } catch (error: any) {
+    console.error(error);
 
-    res.status(500).json({
-      error: err.message,
+    return res.status(500).json({
+      error: error.message ?? "Internal Server Error",
     });
   }
 });
 
 /**
- * Application Startup
+ * 404 Handler
+ */
+app.use((req, res) => {
+  res.status(404).json({
+    error: "Endpoint not found",
+  });
+});
+
+/**
+ * Bootstrap
  */
 async function bootstrap() {
   console.log("=================================");
@@ -64,6 +79,10 @@ async function bootstrap() {
 
   await mcp.listTools();
 
+  chatService = new ChatService(mcp);
+
+  await chatService.initialize();
+
   app.listen(PORT, () => {
     console.log("");
     console.log("=================================");
@@ -72,8 +91,8 @@ async function bootstrap() {
   });
 }
 
-bootstrap().catch((err) => {
+bootstrap().catch((error) => {
   console.error("Failed to start application");
-  console.error(err);
+  console.error(error);
   process.exit(1);
 });

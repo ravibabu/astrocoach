@@ -1,0 +1,253 @@
+ravibabu@Ravis-Mac-mini astrocoach % cd backend
+ravibabu@Ravis-Mac-mini backend % npm run dev
+
+> astrocoach@1.0.0 dev
+> tsx watch src/server.ts
+
+=================================
+Starting AstroCoach Backend...
+=================================
+🔄 Connecting to MCP Server...
+✅ MCP Connected
+
+========== AVAILABLE TOOLS ==========
+• generate_horoscope
+• get_amsa_rulers
+• get_arudha_padas
+• get_ashtakavarga
+• get_bhava_bala
+• get_chandra_arudhas
+• get_chara_karakas
+• get_dasha
+• get_divisional_chart
+• get_doshas
+• get_gochara
+• get_gochara_range
+• get_graha_arudhas
+• get_house_varnadas
+• get_longevity
+• get_marriage_match
+• get_muhurta
+• get_nakshatra_pada
+• get_other_bala
+• get_planet_ingress
+• get_planetary_states
+• get_sahams
+• get_saturn_transit
+• get_shad_bala
+• get_special_lagnas
+• get_sphutas
+• get_surya_arudhas
+• get_upagrahas
+• get_vaiseshikamsa_bala
+• get_vimsopaka_bala
+• get_yogas
+• list_divisional_charts
+=====================================
+
+Initializing Chat Service...
+Loaded 1 Gemini Tools
+
+=================================
+🚀 Server running on http://localhost:3000
+=================================
+
+=================================
+🚀 Starting Agent Loop...
+=================================
+
+🤖 Asking Gemini...
+Sending 32 tools to Gemini
+there are non-text parts functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+there are non-text parts functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+📊 Gemini Tokens -> Prompt: 15909, Completion: 72, Total: 16076
+there are non-text parts functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+=================================
+🔧 Tool Selected : generate_horoscope
+=================================
+Arguments:
+{
+  "timezone": 5.5,
+  "time": "19:15:00",
+  "longitude": 84.727,
+  "place": "Chapra, Bihar",
+  "latitude": 25.856,
+  "date": "1989-03-24"
+}
+🔧 Calling Tool : generate_horoscope
+
+=================================
+📦 MCP Tool Result
+=================================
+{"birth_details": {"date": "1989-03-24", "time": "19:15:00", "place": "Chapra, Bihar", "latitude": 25.856, "longitude": 84.727, "timezone": 5.5, "ayanamsa_mode": "LAHIRI"}, "summary": {"ascendant_nakshatra": "Chitra", "ascendant_pada": 2, "moon_nakshatra": "Chitra", "moon_pada": 4, "moon_nakshatra_lord": "Mars", "sun_nakshatra": "Uttara Bhadrapada"}, "calendar_info": {"Place": "Chapra, Bihar", "Latitude": "25° 51’ 22\" N", "Longitude": "84° 43’ 37\" E", "Timezone Offset": "5.50", "Report Date": "2026-7-24", "Day": "Friday", "Calcuation Type:": "Drik", "Lunar Year/Month:": "Parabhava / Aadi ", "Solar Month:": "Aadi Date 8", "Kali Year": 5127, "Vikarama Year": 2083, "Saka Year": 1948, "Sun Rise": "05:17:13", "Sun Set": "18:37:49", "Moon Rise": "14:33:09", "Moon Set": "00:44:34", "Tithi": "Sukla Paksha Dhasami (Nithya) 16:59:36 (-1) from 09:13:16 ends (56.82% Balance )", "Raasi": "Scorpio 07:34:58 (+2) ends (82.62% Balance )", "Nakshatram": "Visaakam  (Ju) Quarter-4 01:42:38 from 01:42:53
+...
+(1935 characters)
+
+🔁 Continuing Agent Loop...
+
+🤖 Asking Gemini...
+Sending 32 tools to Gemini
+there are non-text parts functionCall,functionCall,functionCall,functionCall,functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+there are non-text parts functionCall,functionCall,functionCall,functionCall,functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+📊 Gemini Tokens -> Prompt: 16994, Completion: 375, Total: 17583
+there are non-text parts functionCall,functionCall,functionCall,functionCall,functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+=================================
+🔧 Tool Selected : get_divisional_chart
+=================================
+Arguments:
+{
+  "place": "Chapra, Bihar",
+  "longitude": 84.727,
+  "varga": "D-1",
+  "latitude": 25.856,
+  "timezone": 5.5,
+  "date": "1989-03-24",
+  "time": "19:15:00"
+}
+🔧 Calling Tool : get_divisional_chart
+
+=================================
+📦 MCP Tool Result
+=================================
+{"section": "divisional_charts", "data": {"Ascendant": {"sign": "Virgo", "longitude": 26.9215}, "Sun": {"sign": "Pisces", "longitude": 10.1932}, "Moon": {"sign": "Libra", "longitude": 3.6018}, "Mars": {"sign": "Taurus", "longitude": 14.3589}, "Mercury": {"sign": "Aquarius", "longitude": 29.6375}, "Jupiter": {"sign": "Taurus", "longitude": 8.4356}, "Venus": {"sign": "Pisces", "longitude": 7.2994}, "Saturn": {"sign": "Sagittarius", "longitude": 19.5193}, "Rahu": {"sign": "Aquarius", "longitude": 9.7071}, "Ketu": {"sign": "Leo", "longitude": 9.7071}, "Uranus": {"sign": "Sagittarius", "longitude": 11.519}, "Neptune": {"sign": "Sagittarius", "longitude": 18.5622}, "Pluto": {"sign": "Libra", "longitude": 21.1104}}, "varga": "D-1_rasi"}
+
+🔁 Continuing Agent Loop...
+
+🤖 Asking Gemini...
+Sending 32 tools to Gemini
+there are non-text parts functionCall,functionCall,functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+there are non-text parts functionCall,functionCall,functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+📊 Gemini Tokens -> Prompt: 17571, Completion: 219, Total: 17824
+there are non-text parts functionCall,functionCall,functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+=================================
+🔧 Tool Selected : get_nakshatra_pada
+=================================
+Arguments:
+{
+  "time": "19:15:00",
+  "place": "Chapra, Bihar",
+  "latitude": 25.856,
+  "date": "1989-03-24",
+  "longitude": 84.727,
+  "timezone": 5.5
+}
+🔧 Calling Tool : get_nakshatra_pada
+
+=================================
+📦 MCP Tool Result
+=================================
+{"section": "nakshatra_pada", "data": {"Ascendant": {"nakshatra": "Chitra", "nakshatra_number": 14, "pada": 2, "nakshatra_lord": "Mars", "degrees_in_nakshatra": 3.5882}, "Sun": {"nakshatra": "Uttara Bhadrapada", "nakshatra_number": 26, "pada": 3, "nakshatra_lord": "Saturn", "degrees_in_nakshatra": 6.8599}, "Moon": {"nakshatra": "Chitra", "nakshatra_number": 14, "pada": 4, "nakshatra_lord": "Mars", "degrees_in_nakshatra": 10.2685}, "Mars": {"nakshatra": "Rohini", "nakshatra_number": 4, "pada": 2, "nakshatra_lord": "Moon", "degrees_in_nakshatra": 4.3589}, "Mercury": {"nakshatra": "Purva Bhadrapada", "nakshatra_number": 25, "pada": 3, "nakshatra_lord": "Jupiter", "degrees_in_nakshatra": 9.6375}, "Jupiter": {"nakshatra": "Krittika", "nakshatra_number": 3, "pada": 4, "nakshatra_lord": "Sun", "degrees_in_nakshatra": 11.769}, "Venus": {"nakshatra": "Uttara Bhadrapada", "nakshatra_number": 26, "pada": 2, "nakshatra_lord": "Saturn", "degrees_in_nakshatra": 3.9661}, "Saturn": {"nakshatra": "Purv
+...
+(1761 characters)
+
+🔁 Continuing Agent Loop...
+
+🤖 Asking Gemini...
+Sending 32 tools to Gemini
+there are non-text parts functionCall,functionCall,functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+there are non-text parts functionCall,functionCall,functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+📊 Gemini Tokens -> Prompt: 18374, Completion: 217, Total: 18619
+there are non-text parts functionCall,functionCall,functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+=================================
+🔧 Tool Selected : get_yogas
+=================================
+Arguments:
+{
+  "place": "Chapra, Bihar",
+  "latitude": 25.856,
+  "timezone": 5.5,
+  "longitude": 84.727,
+  "time": "19:15:00",
+  "date": "1989-03-24"
+}
+🔧 Calling Tool : get_yogas
+
+=================================
+📦 MCP Tool Result
+=================================
+{"section": "yogas", "data": {"summary": {"total_yogas_found": 26, "total_yogas_possible": 284, "total_raja_yogas_found": 1, "total_raja_yogas_possible": 3}, "yoga_list": {"vosi_yoga": ["D1", "Vosi Yoga", "There is a planet other than Moon in the 12th house from Sun", "You will be skillful, charitable, famous, learned and strong."], "anaphaa_yoga": ["D1", "Anaphaa Yoga", "There are planets other than Sun in the 12th house from Moon", "You will become a king with good looks. Your body is likely free from disease. You are a person of character and have great reputation. You are surrounded by comforts."], "adhi_yoga": ["D1", "Adhi Yoga", "Natural benefics occupy 6th, 7th and 8th from Moon", "You may become a king or a minister or an army chief, depending on the strength of the planets involved"], "maalavya_yoga": ["D1", "Maalavya Yoga", "Venus is in a quadrant in own sign or exaltation sign.", "You are a great person of watery nature. You emit a lustre akin to moonlight. You enjoy tasty f
+...
+(6928 characters)
+
+🔁 Continuing Agent Loop...
+
+🤖 Asking Gemini...
+Sending 32 tools to Gemini
+there are non-text parts functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+there are non-text parts functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+📊 Gemini Tokens -> Prompt: 20605, Completion: 72, Total: 20996
+there are non-text parts functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+=================================
+🔧 Tool Selected : get_doshas
+=================================
+Arguments:
+{
+  "date": "1989-03-24",
+  "longitude": 84.727,
+  "time": "19:15:00",
+  "place": "Chapra, Bihar",
+  "latitude": 25.856,
+  "timezone": 5.5
+}
+🔧 Calling Tool : get_doshas
+
+=================================
+📦 MCP Tool Result
+=================================
+{"section": "doshas", "data": {"Kala Sarpa Dosha": "<html>There is no Kala Sarpa Dosha in this horoscope.<br><br></html>", "Manglik Dosha": "<html>There is no Manglik/Mars dosha in this horoscope.<br><br></html>", "Pitru Dosha": "<html>Pitru Dosha is a planetary flaw that means a karmic debt of the ancestors, which is to be paid by the person afflicted with Pitru Dosha in the Kundli. It is formed when your forefathers have committed any mistakes, crimes, or sins in their life journey. In return, you have to pay the karmic debt by experiencing different challenges or punishments in your life. This Dosha is created when Sun or Moon are in conjunction or aspects Rahu or Ketu in your birth chart. The malefic effects of this Dosha become severe when the conjunction takes place in the 1st, 5th, 8th, or 9th house of the birth chart. Hence, if you are facing never-ending troubles, Pitru Dosha may be the reason for the pain and agony in your life. <br> There is pitru dosha in this horoscope for
+...
+(1576 characters)
+
+🔁 Continuing Agent Loop...
+
+🤖 Asking Gemini...
+Sending 32 tools to Gemini
+there are non-text parts functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+there are non-text parts functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+📊 Gemini Tokens -> Prompt: 21428, Completion: 73, Total: 21632
+there are non-text parts functionCall in the response, returning concatenation of all text parts. Please refer to the non text parts for a full response from model.
+
+=================================
+🔧 Tool Selected : get_planetary_states
+=================================
+Arguments:
+{
+  "place": "Chapra, Bihar",
+  "time": "19:15:00",
+  "longitude": 84.727,
+  "date": "1989-03-24",
+  "latitude": 25.856,
+  "timezone": 5.5
+}
+🔧 Calling Tool : get_planetary_states
+
+=================================
+📦 MCP Tool Result
+=================================
+{"section": "planetary_states", "data": {"retrograde_planets": ["Pluto"], "combusted_planets": ["Venus"], "exalted_planets": ["Venus"], "debilitated_planets": [], "own_sign_planets": [], "friend_sign_planets": ["Sun"], "enemy_sign_planets": ["Jupiter"]}}
+
+🔁 Continuing Agent Loop...
+
+🤖 Asking Gemini...
+Sending 32 tools to Gemini
+ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.5-flash\nPlease retry in 57.257707422s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-3.5-flash"},"quotaValue":"5"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"57s"}]}}
+    at throwErrorIfNotOK (/Users/ravibabu/Documents/Projects/astrocoach/backend/node_modules/@google/genai/src/_api_client.ts:982:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async <anonymous> (/Users/ravibabu/Documents/Projects/astrocoach/backend/node_modules/@google/genai/src/_api_client.ts:587:9)
+    at async Models.Models.generateContent (/Users/ravibabu/Documents/Projects/astrocoach/backend/node_modules/@google/genai/src/models.ts:128:14)
+    at async GeminiService.generate (/Users/ravibabu/Documents/Projects/astrocoach/backend/src/llm/GeminiService.ts:35:26)
+    at async ChatService.chat (/Users/ravibabu/Documents/Projects/astrocoach/backend/src/services/ChatService.ts:59:30)
+    at async <anonymous> (/Users/ravibabu/Documents/Projects/astrocoach/backend/src/server.ts:45:20) {
+  status: 429
+}
