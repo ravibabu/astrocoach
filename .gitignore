@@ -19,6 +19,7 @@ vite.config.d.ts
 .claude/
 .cursor/
 .windsurf/
+skills-lock.json
 **/.agent/
 **/.agents/
 **/.claude/
