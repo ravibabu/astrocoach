@@ -1,0 +1,13 @@
+node_modules/
+
+# Local AI agents and editor metadata
+.agent/
+.agents/
+.claude/
+.cursor/
+.windsurf/
+
+# Keep environment variables out of version control
+.env
+
+/src/generated/prisma
