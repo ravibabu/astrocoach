@@ -8,13 +8,21 @@
   "dependencies": {
     "@google/genai": "^2.12.0",
     "@modelcontextprotocol/sdk": "^1.29.0",
+    "@prisma/adapter-pg": "^7.9.0",
+    "@prisma/client": "^7.9.0",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.1.0",
-    "openai": "^6.49.0"
+    "firebase-admin": "^14.2.0",
+    "openai": "^6.49.0",
+    "pg": "^8.22.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.0",
+    "@types/pg": "^8.20.0",
+    "prisma": "^7.9.0",
     "tsx": "^4.20.0",
     "typescript": "^5.8.0"
   }

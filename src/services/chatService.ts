@@ -191,24 +191,7 @@ export class ChatService {
             console.log("📦 MCP Tool Result");
             console.log("=================================");
 
-            //
-            // Don't dump huge JSON to console
-            //
             const rawToolResponse = toolResult.content?.[0]?.text ?? "";
-
-            if (rawToolResponse.length > 1000) {
-
-                console.log(rawToolResponse.substring(0, 1000));
-                console.log("...");
-                console.log(
-                    `(${rawToolResponse.length} characters)`
-                );
-
-            } else {
-
-                console.log(rawToolResponse);
-
-            }
 
             //
             // Parse tool response
@@ -224,6 +207,15 @@ export class ChatService {
                 toolData = rawToolResponse;
 
             }
+
+            // Print the complete result without truncating nested values,
+            // arrays, or long strings.
+            console.dir(toolData, {
+                depth: null,
+                colors: true,
+                maxArrayLength: null,
+                maxStringLength: null,
+            });
 
             //
             // Add tool response back to Gemini
