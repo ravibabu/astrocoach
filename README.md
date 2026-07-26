@@ -172,7 +172,7 @@ Request:
 
 ```json
 {
-  "message": "Create my horoscope for 24 March 1989 at 7:15 PM in Chapra, Bihar."
+  "message": "Create my horoscope for 24 March 2000 at 7:15 PM in Chapra, Bihar."
 }
 ```
 
@@ -182,7 +182,7 @@ Example with `curl`:
 curl --request POST http://localhost:3000/chat \
   --header "Content-Type: application/json" \
   --data '{
-    "message": "Create my horoscope for 24 March 1989 at 7:15 PM in Chapra, Bihar."
+    "message": "Create my horoscope for 24 March 2000 at 7:15 PM in Chapra, Bihar."
   }'
 ```
 
